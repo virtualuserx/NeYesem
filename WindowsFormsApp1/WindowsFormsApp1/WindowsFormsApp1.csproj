@@ -1,0 +1,171 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A2903DB3-54CF-4457-855D-609CFE10402A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>WindowsFormsApp1</RootNamespace>
+    <AssemblyName>WindowsFormsApp1</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System">
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FORMS\Acilis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\Acilis.Designer.cs">
+      <DependentUpon>Acilis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DBO\connection.cs" />
+    <Compile Include="DBO\icindekiler.cs" />
+    <Compile Include="DBO\kategoriler.cs" />
+    <Compile Include="DBO\malzeme.cs" />
+    <Compile Include="DBO\ozellikler.cs" />
+    <Compile Include="DBO\yemekler.cs" />
+    <Compile Include="FORMS\Admin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\Admin.Designer.cs">
+      <DependentUpon>Admin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\YemekListeleme.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\YemekListeleme.Designer.cs">
+      <DependentUpon>YemekListeleme.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORMS\YemekTarifiGoster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\YemekTarifiGoster.Designer.cs">
+      <DependentUpon>YemekTarifiGoster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="INF\filtrele.cs" />
+    <Compile Include="INF\icindekiler.cs" />
+    <Compile Include="INF\icindekiler_listeleme.cs" />
+    <Compile Include="INF\kategoriler.cs" />
+    <Compile Include="INF\malzeme.cs" />
+    <Compile Include="INF\ozellikler.cs" />
+    <Compile Include="INF\yemek.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FORMS\Acilis.resx">
+      <DependentUpon>Acilis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\Admin.resx">
+      <DependentUpon>Admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\YemekListeleme.resx">
+      <DependentUpon>YemekListeleme.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\YemekTarifiGoster.resx">
+      <DependentUpon>YemekTarifiGoster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="IMAGES\2.jpg" />
+    <Content Include="IMAGES\aceb_6.jpg" />
+    <Content Include="IMAGES\balık_kategori.png" />
+    <Content Include="IMAGES\bayat_ekmekli_omlet.jpg" />
+    <Content Include="IMAGES\bulgurlu_pancarli_salata.jpg" />
+    <Content Include="IMAGES\bulgur_pilavı.jpg" />
+    <Content Include="IMAGES\cinekop_3.jpg" />
+    <Content Include="IMAGES\ferah_salata.jpg" />
+    <Content Include="IMAGES\firindahamsi_9.jpg" />
+    <Content Include="IMAGES\gift-box-with-a-ribbon.png" />
+    <Content Include="IMAGES\karalahana_8.jpg" />
+    <Content Include="IMAGES\kiymaliekmek_12.jpg" />
+    <Content Include="IMAGES\menemen.jpg" />
+    <Content Include="IMAGES\misirli_salata.jpg" />
+    <Content Include="IMAGES\misir_7.jpg" />
+    <Content Include="IMAGES\palamutbugulama_10.jpg" />
+    <Content Include="IMAGES\pilav1.jpg" />
+    <Content Include="IMAGES\rus_salatasi.jpg" />
+    <Content Include="IMAGES\sucuk_hellim_yumurta.jpg" />
+    <Content Include="IMAGES\sutlu_kemalpasa_tatlisi.jpg" />
+    <Content Include="IMAGES\System\arrow.png" />
+    <Content Include="IMAGES\System\close.png" />
+    <Content Include="IMAGES\System\closehover.png" />
+    <Content Include="IMAGES\System\left.png" />
+    <Content Include="IMAGES\System\lefthover.png" />
+    <Content Include="IMAGES\System\min.png" />
+    <Content Include="IMAGES\System\minhover.png" />
+    <Content Include="IMAGES\System\notfound.jpg" />
+    <Content Include="IMAGES\System\right.png" />
+    <Content Include="IMAGES\System\righthover.png" />
+    <Content Include="IMAGES\tambugday_11.jpg" />
+    <Content Include="IMAGES\tatli1.png" />
+    <Content Include="IMAGES\tatli_pancake.jpg" />
+    <Content Include="IMAGES\tatli_patates_cipsi.jpg" />
+    <Content Include="IMAGES\tavuklar.jpg" />
+    <Content Include="IMAGES\tavuklu_pilav.png" />
+    <Content Include="IMAGES\tavuk_sote.jpg" />
+    <Content Include="IMAGES\tortilla_14.jpg" />
+    <Content Include="IMAGES\yogurtsoslu_13.jpg" />
+    <Content Include="IMAGES\yumurtalar.jpg" />
+    <Content Include="IMAGES\yumurtali_patates.jpg" />
+    <Content Include="IMAGES\yumurta_dolmasi.jpg" />
+    <Content Include="IMAGES\çorba_kategori.jpg" />
+    <Content Include="Resimler\gift-box-with-a-ribbon.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
